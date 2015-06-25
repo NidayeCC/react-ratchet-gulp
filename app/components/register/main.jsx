@@ -3,7 +3,7 @@ var RegisterHeader = React.createClass({
         return (
             <div>
                 <HeaderLink icon="icon icon-left" align="left" href="./login.html"/>
-                <HeaderTitle title="用户注册" />
+                <HeaderTitle title="Register" />
             </div>
         );
     }
@@ -17,10 +17,10 @@ var RegisterBody = React.createClass({
         return (
             <div className="register">
                 <form className="input-group">
-                    <input type="text" name="username" placeholder="用户名"/>
-                    <input type="password" name="password" placeholder="密码"/>
-                    <input type="password" name="password2" placeholder="重复密码"/>
-                    <button className="btn btn-block btn-positive" ref="RegisterBtn" onClick={this.doRegister}>注册</button>
+                    <input type="text" name="username" placeholder="Username"/>
+                    <input type="password" name="password" placeholder="Password"/>
+                    <input type="password" name="password2" placeholder="Password Confirm"/>
+                    <button className="btn btn-block btn-positive" ref="RegisterBtn" onClick={this.doRegister}>Register</button>
                 </form>
             </div>
         );

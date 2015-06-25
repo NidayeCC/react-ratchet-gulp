@@ -1,12 +1,12 @@
 var LoginHeader = React.createClass({displayName: "LoginHeader",
     onMenuClick: function(){
-        console.info("显示菜单咯");
+        console.info("Show menu");
     },
     render: function () {
         return (
             React.createElement("div", null, 
                 React.createElement(HeaderLink, {icon: "icon icon-person", align: "left", onClick: this.onMenuClick}), 
-                React.createElement(HeaderTitle, {title: "用户登录"}), 
+                React.createElement(HeaderTitle, {title: "Login"}), 
                 React.createElement(HeaderLink, {icon: "icon icon-home", align: "right"})
             )
         );
@@ -19,11 +19,11 @@ var LoginBody = React.createClass({displayName: "LoginBody",
     },
     render: function () {
         return (
-            React.createElement("div", {className: "card login"}, 
+            React.createElement("div", {className: "login"}, 
                 React.createElement("form", {className: "input-group"}, 
-                    React.createElement("input", {type: "text", name: "username", placeholder: "用户名"}), 
-                    React.createElement("input", {type: "password", name: "password", placeholder: "密码"}), 
-                    React.createElement("button", {className: "btn btn-block btn-primary", ref: "loginBtn", onClick: this.doLogin}, "登录")
+                    React.createElement("input", {type: "text", name: "username", placeholder: "Username"}), 
+                    React.createElement("input", {type: "password", name: "password", placeholder: "Password"}), 
+                    React.createElement("button", {className: "btn btn-block btn-primary", ref: "loginBtn", onClick: this.doLogin}, "Login")
                 )
             )
         );
@@ -35,7 +35,7 @@ var RegisterHeader = React.createClass({displayName: "RegisterHeader",
         return (
             React.createElement("div", null, 
                 React.createElement(HeaderLink, {icon: "icon icon-left", align: "left", href: "./login.html"}), 
-                React.createElement(HeaderTitle, {title: "用户注册"})
+                React.createElement(HeaderTitle, {title: "Register"})
             )
         );
     }
@@ -49,10 +49,10 @@ var RegisterBody = React.createClass({displayName: "RegisterBody",
         return (
             React.createElement("div", {className: "register"}, 
                 React.createElement("form", {className: "input-group"}, 
-                    React.createElement("input", {type: "text", name: "username", placeholder: "用户名"}), 
-                    React.createElement("input", {type: "password", name: "password", placeholder: "密码"}), 
-                    React.createElement("input", {type: "password", name: "password2", placeholder: "重复密码"}), 
-                    React.createElement("button", {className: "btn btn-block btn-positive", ref: "RegisterBtn", onClick: this.doRegister}, "注册")
+                    React.createElement("input", {type: "text", name: "username", placeholder: "Username"}), 
+                    React.createElement("input", {type: "password", name: "password", placeholder: "Password"}), 
+                    React.createElement("input", {type: "password", name: "password2", placeholder: "Password Confirm"}), 
+                    React.createElement("button", {className: "btn btn-block btn-positive", ref: "RegisterBtn", onClick: this.doRegister}, "Register")
                 )
             )
         );
