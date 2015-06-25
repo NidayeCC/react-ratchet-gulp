@@ -7,7 +7,7 @@ var LoginHeader = React.createClass({
             <div>
                 <HeaderLink icon="icon icon-person" align="left" onClick={this.onMenuClick}/>
                 <HeaderTitle title="Login" />
-                <HeaderLink icon="icon icon-home" align="right"/>
+                <HeaderLink icon="icon icon-home" align="right" href="./register.html" slide="in"/>
             </div>
         );
     }

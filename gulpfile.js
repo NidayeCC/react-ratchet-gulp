@@ -18,7 +18,8 @@ var gulp = require('gulp'),
 var paths = {
     vendorJs: [
         'app/vendor/react.js',
-        'app/vendor/zepto.js'
+        'app/vendor/zepto.js',
+        'app/vendor/ratchet.push.js'
     ],
     vendorCss: [
         'app/vendor/ratchet.css'

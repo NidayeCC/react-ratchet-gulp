@@ -7,3 +7,14 @@
 	+ Open **public/views/login.html** or **register.html** in Chrome's device mode:
 
 	![login](images/login.png) ![register](images/register.png)
+
+	+ **NOTE**: If you add **Ratchet.js** into vendor.js，the UI can't respond any event.
+	
+	+ **Push**: If you want **Ratchet**'s push feature, need to add **push** event:
+	
+		```javascript
+		window.addEventListener('push', function (e) {
+	      // render React component
+	      doRender();
+	   });
+		```

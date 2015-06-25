@@ -7,7 +7,7 @@ var LoginHeader = React.createClass({displayName: "LoginHeader",
             React.createElement("div", null, 
                 React.createElement(HeaderLink, {icon: "icon icon-person", align: "left", onClick: this.onMenuClick}), 
                 React.createElement(HeaderTitle, {title: "Login"}), 
-                React.createElement(HeaderLink, {icon: "icon icon-home", align: "right"})
+                React.createElement(HeaderLink, {icon: "icon icon-home", align: "right", href: "./register.html", slide: "in"})
             )
         );
     }
@@ -34,7 +34,7 @@ var RegisterHeader = React.createClass({displayName: "RegisterHeader",
     render: function () {
         return (
             React.createElement("div", null, 
-                React.createElement(HeaderLink, {icon: "icon icon-left", align: "left", href: "./login.html"}), 
+                React.createElement(HeaderLink, {icon: "icon icon-left", align: "left", href: "./login.html", slide: "out"}), 
                 React.createElement(HeaderTitle, {title: "Register"})
             )
         );
@@ -79,9 +79,10 @@ var HeaderLink = React.createClass({displayName: "HeaderLink",
         var content = this.props.content || '';
         var onClick = this.props.onClick || function(){};
         var href = this.props.href || '#';
+        var slide = 'slide-' + (this.props.slide || 'in');
 
         return (
-            React.createElement("a", {className: klass, href: href, onClick: onClick}, content)
+            React.createElement("a", {className: klass, href: href, onClick: onClick, "data-transition": slide}, content)
         );
     }
 });

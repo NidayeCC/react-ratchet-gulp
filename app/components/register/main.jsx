@@ -2,7 +2,7 @@ var RegisterHeader = React.createClass({
     render: function () {
         return (
             <div>
-                <HeaderLink icon="icon icon-left" align="left" href="./login.html"/>
+                <HeaderLink icon="icon icon-left" align="left" href="./login.html" slide="out"/>
                 <HeaderTitle title="Register" />
             </div>
         );
